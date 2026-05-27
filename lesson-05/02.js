@@ -35,4 +35,21 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(galleryObj,name,amount) {
+  if (galleryObj === gallery){
+    if(name === 'Mona Lisa'){
+      galleryObj["Mona Lisa"] = amount
+    } else if(name === 'Starry Night'){
+      galleryObj["Starry Night"] = amount
+    } else if(name === 'The Scream'){
+      galleryObj["The Scream"] = amount
+    } else {
+      galleryObj[name] = amount
+    } 
+  }else {
+    console.log("вы не в галлерее")
+  }
+}
+updateGallery(gallery, "Girl with a Pearl Earring", "Johannes Vermeer")
+updateGallery(gallery,'Mona Lisa', "leonardo")
+console.log(gallery)
